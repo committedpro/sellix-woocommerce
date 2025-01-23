@@ -33,7 +33,7 @@ class WC_Gateway_SellixPay extends WC_Payment_Gateway
 		$this->description = $this->get_option('description');
 		$this->api_key = $this->get_option('api_key');
 		$this->order_id_prefix = $this->get_option('order_id_prefix');
-		$this->url_branded = $this->get_option('url_branded') == 'yes' ? true : false;
+		$this->url_branded = false;//$this->get_option('url_branded') == 'yes' ? true : false;
 
 		// Actions
 		add_action('woocommerce_update_options_payment_gateways_' . $this->id, [$this, 'process_admin_options']);
@@ -100,13 +100,13 @@ class WC_Gateway_SellixPay extends WC_Payment_Gateway
 				'description' => __('Please enter your Sellix API Key.', 'sellix-pay'),
 				'default' => '',
 			],
-			'url_branded' => [
+			/*'url_branded' => [
 				'title' => __('Branded URL', 'sellix-pay'),
 				'label' => __('Enable/Disable Sellix Pay Checkout Branded URL', 'sellix-pay'),
 				'type' => 'checkbox',
 				'description' => __('If this is enabled, customer will be redirected to your branded sellix pay checkout url', 'sellix-pay'),
 				'default' => 'no',
-			],
+			],*/
 			'order_id_prefix' => [
 				'title' => __('Order ID Prefix', 'sellix-pay'),
 				'type' => 'text',
@@ -150,11 +150,11 @@ class WC_Gateway_SellixPay extends WC_Payment_Gateway
 			}
 
 			$url = $responseDecode['data']['url'];
-			if ($this->url_branded) {
+			/*if ($this->url_branded) {
 				if (isset($responseDecode['data']['url_branded'])) {
 					$url = $responseDecode['data']['url_branded'];
 				}
-			}
+			}*/
 			return $url;
 		} else {
 			$errorMessage = __('Payment Gateway Error: Empty response received.', 'sellix-pay');

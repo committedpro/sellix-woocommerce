@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Sellix Pay
  * Description: Accept Cryptocurrencies, Credit Cards, PayPal and regional banking methods with Sellix Pay.
- * Version: 1.9.7
+ * Version: 1.9.8
  * Requires at least: 4.9
  * Tested up to: 6.7.1
  * WC requires at least: 3.5
@@ -17,7 +17,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('SELLIX_VERSION', '1.9.7');
+define('SELLIX_VERSION', '1.9.8');
 define('SELLIX_PLUGIN_DIR', untrailingslashit( dirname(__FILE__)));
 define('SELLIX_DIR_NAME', plugin_basename(dirname(__FILE__)));
 define('SELLIX_BASE_URL', plugins_url() . '/' . SELLIX_DIR_NAME);

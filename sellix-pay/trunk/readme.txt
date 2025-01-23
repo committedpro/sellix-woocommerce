@@ -1,7 +1,7 @@
 === Sellix Pay ===
 Contributors: sellix
 Tags: sellix-pay, payment gateway, woocommerce, crypto, paypal
-Stable tag: 1.9.7
+Stable tag: 1.9.8
 Requires at least: 4.9
 Tested up to: 6.7.1
 WC requires at least: 3.5
@@ -91,6 +91,10 @@ It’s simple. Tap on the “Sign Up” button on the top and start transferring
 10. Sellix Pay Crypto Currency Transactions.
 
 == Changelog ==
+
+= 1.9.8 =
+* Jan 22, 2025
+* Removed branded sellix checkout URL
 
 = 1.9.7 =
 * Jan 03, 2025

@@ -26,6 +26,10 @@ WooCommerce plugin to use Sellix as a Payment Gateway.
 
 == Changelog ==
 
+= 1.9.8 =
+* Jan 22, 2025
+* Removed branded sellix checkout URL
+
 = 1.9.7 =
 * Jan 03, 2025
 * Applied various security fixes
